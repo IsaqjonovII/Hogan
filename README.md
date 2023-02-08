@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![My Skills](https://skills.thijs.gg/icons?i=js,react,redux,firebase&theme=dark)](https://skills.thijs.gg)
 
 ## Available Scripts
 
