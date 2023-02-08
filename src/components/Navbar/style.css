@@ -1,0 +1,12 @@
+.navbar__wrapper {
+    width: 100%;
+    height: 120px;
+    box-shadow: 0 0 15px #bab9b9;
+    background-color: var(--main-bg-white);
+}
+
+.navbar__top {
+    width: 100%;
+    height: 80px;
+    background-color: var(--main-bg-white);
+}
