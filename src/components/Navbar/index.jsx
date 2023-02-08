@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Hogan__Logo } from "../../assets";
 import { ImLocation, ImSearch } from "react-icons/im";
 import { FaUser } from "react-icons/fa";
@@ -7,6 +7,10 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isNavHovered, setIsNavHovered] = useState(false);
+
+  const changeNavState = () => setIsNavHovered(!isNavHovered);
+
   return (
     <div className="navbar__wrapper">
       <div className="navbar__top flex">
@@ -29,17 +33,36 @@ const Navbar = () => {
 
       <div className="navbar__main flex">
         <ul className="navmain__collection flex">
-          <li className="collection__item">Sneakers</li>
-          <li className="collection__item">Woman</li>
-          <li className="collection__item">Man</li>
-          <li className="collection__item">Junior</li>
-          <li className="collection__item">Rebel Society</li>
+          <li
+            className={
+              isNavHovered ? "collection__item hoverable" : "collection__item"
+            }
+            onMouseOver={changeNavState}
+            onMouseOut={() => changeNavState(false)}
+          >
+            <p className="list__title">Sneakers</p>
+            <div className="sneakers"></div>
+          </li>
+          <li className="collection__item">
+            <p className="list__title">Woman</p>
+            <div className="sneakers"></div>
+          </li>
+          <li className="collection__item">
+            <p className="list__title">Man</p>
+            <div className="sneakers"></div>
+          </li>
+          <li className="collection__item">
+            <p className="list__title">Junior</p>
+            <div className="sneakers"></div>
+          </li>
+          <li className="collection__item">
+            <p className="list__title">Rebel Society</p>
+            <div className="sneakers"></div>
+          </li>
         </ul>
       </div>
 
-      <div className="sidebar">
-        
-      </div>
+      <div className="sidebar"></div>
     </div>
   );
 };
