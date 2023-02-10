@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Solitreo
+- Font Author: Copyright 2019 The Solitreo Project Authors (https://github.com/ladinoprojects/solitreo)
+- Font Source: http://fonts.gstatic.com/s/solitreo/v1/r05YGLlS5a9KYsyNO8upyDYtStiJ.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

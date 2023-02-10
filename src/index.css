@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: var(--main-font-lato);
   box-sizing: border-box;
 }
 
@@ -8,6 +11,16 @@
   --main-bg-white: #f7f7f7;
   --main-black: #000000;
   --main-gray: #6f6f6f;
-  --main-font-nomi: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  --primary-font-size: 18px; 
+  --main-font-lato: 'Lato', sans-serif;
+  --primary-font-size: 18px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  all: inherit;
 }
