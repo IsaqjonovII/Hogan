@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaUser } from "react-icons/fa";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { BsQuestionCircle } from "react-icons/bs";
+import { FaEnvelope, FaUser } from "react-icons/fa";
 import { ImLocation, ImSearch } from "react-icons/im";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { BsQuestionCircle, BsChevronRight } from "react-icons/bs";
 import "./style.css";
 import { Hogan__Logo } from "../../assets";
 import { NavList } from "../../mocks/navdata";
@@ -59,8 +59,8 @@ const Navbar = () => {
                     <li>
                       <h3>{collection_title}</h3>
                     </li>
-                    {collection__items?.map((list__item) => (
-                      <li>{list__item}</li>
+                    {collection__items?.map((list__item, inx) => (
+                      <li key={inx}>{list__item}</li>
                     ))}
                   </ul>
                 ))}
@@ -74,6 +74,30 @@ const Navbar = () => {
         <div className="close__icon__wrapper">
           <AiOutlineClose onClick={() => setIsSidebarOpen(false)} />{" "}
           <span onClick={() => setIsSidebarOpen(false)}>Close</span>
+        </div>
+
+        <div className="sidebar__links__wrapper">
+          {NavList.map(({ id, title }) => (
+            <div className="sidebar__link__wrapper flex" key={id}>
+              <p className="sidebar__link">{title}</p>
+              <BsChevronRight className="sidebar__link__icon" />
+            </div>
+          ))}
+        </div>
+
+        <div className="sidebar__bottom">
+          <div className="bottom__section">
+            <FaUser className="icon"/>
+            <span className="section__title">My Account</span>
+          </div>
+          <div className="bottom__section">
+            <FaEnvelope className="icon"/>
+            <span className="section__title">Customer Service</span>
+          </div>
+          <div className="bottom__section">
+            <ImLocation className="icon"/>
+            <span className="section__title">Store Locator</span>
+          </div>
         </div>
       </div>
     </div>
