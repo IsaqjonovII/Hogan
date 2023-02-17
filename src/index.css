@@ -9,8 +9,9 @@
 
 :root {
   --main-bg-white: #f7f7f7;
-  --main-black: #000000;
+  --main-black: #1a1a1a;
   --main-gray: #6f6f6f;
+  --main-light-gray: #dddd;
   --main-font-lato: 'Lato', sans-serif;
   --primary-font-size: 18px;
 }
