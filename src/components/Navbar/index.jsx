@@ -8,9 +8,10 @@ import "./style.css";
 import { Hogan__Logo } from "../../assets";
 import { NavList } from "../../mocks/navdata";
 
-const Navbar = () => {
+const Navbar = ({ changeLoginState }) => {
   const [isNavHovered, setIsNavHovered] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
 
   return (
     <div className="navbar__wrapper">
@@ -31,7 +32,7 @@ const Navbar = () => {
         </div>
 
         <div className="user__actions">
-          <FaUser className="icon" />
+          <FaUser className="icon"  onClick={() => changeLoginState(true)}  />
           <ImSearch className="icon" />
         </div>
       </div>
@@ -87,15 +88,16 @@ const Navbar = () => {
 
         <div className="sidebar__bottom">
           <div className="bottom__section">
-            <FaUser className="icon"/>
+            <FaUser className="icon" 
+           />
             <span className="section__title">My Account</span>
           </div>
           <div className="bottom__section">
-            <FaEnvelope className="icon"/>
+            <FaEnvelope className="icon" />
             <span className="section__title">Customer Service</span>
           </div>
           <div className="bottom__section">
-            <ImLocation className="icon"/>
+            <ImLocation className="icon" />
             <span className="section__title">Store Locator</span>
           </div>
         </div>

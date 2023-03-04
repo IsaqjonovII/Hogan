@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "./style.css"
 
 const Register = () => {
   return (
-    <div>
+    <div className='register__page__wrapper'>
       <h1>Register</h1>
     </div>
   )
