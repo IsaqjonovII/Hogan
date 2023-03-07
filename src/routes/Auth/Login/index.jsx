@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "./style.css";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = ({ isLoginOpened, changeLoginState }) => {
-  const location = useLocation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [err, setErr] = useState("");
-
+  // const [err, setErr] = useState("");
   return (
     <div
       className={
@@ -35,6 +33,7 @@ const Login = ({ isLoginOpened, changeLoginState }) => {
           required
           maxLength={1024}
           minLength={10}
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
@@ -52,14 +51,14 @@ const Login = ({ isLoginOpened, changeLoginState }) => {
           minLength={8}
         />
 
-        {err && (
+        {/* {err && (
           <div className="err">
             <h4>{err}</h4>
             <a href="https://www.hogan.com/ww-en/password-forget/">
               Have you forgotten your login details?
             </a>
           </div>
-        )}
+        )} */}
 
         <button type="submit" className="login__btn">
           Login
@@ -73,7 +72,12 @@ const Login = ({ isLoginOpened, changeLoginState }) => {
           shipping addresses, view and track your orders and much more.
         </p>
         <Link className="register__link" to="/register">
-          <button className="register__link__btn">Register</button>
+          <button
+            className="register__link__btn"
+            onClick={() => changeLoginState(false)}
+          >
+            Register
+          </button>
         </Link>
       </div>
     </div>
