@@ -1,0 +1,27 @@
+.unique__product__page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 130px;
+}
+
+
+.unique__pro__wrapper {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.unique__pro__img__wrapper {
+    width: 50%;
+}
+
+.pro__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.unique__pro__info__wrapper {
+    width: 50%;
+    height: 100%;
+}
