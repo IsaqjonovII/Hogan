@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaEnvelope, FaUser } from "react-icons/fa";
 import { ImLocation, ImSearch } from "react-icons/im";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -9,10 +9,11 @@ import { Hogan__Logo } from "../../assets";
 import { NavList } from "../../mocks/navdata";
 
 const Navbar = ({ changeLoginState }) => {
+  const { pathname } = useLocation();
   const [isNavHovered, setIsNavHovered] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-
+  if(pathname !== "/register")
   return (
     <div className="navbar__wrapper">
       <div className="navbar__top flex">

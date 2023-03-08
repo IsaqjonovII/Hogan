@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = ({ isLoginOpened, changeLoginState }) => {
   const [email, setEmail] = useState("");
