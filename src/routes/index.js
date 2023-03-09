@@ -2,6 +2,7 @@ import Home from "./Home";
 import Register from "./Auth/Register";
 import Products from "./Products";
 import ProductInfo from "./Products/ProductInfo";
+import UserProfile from "./Profile";
 
 const App__Routes = [
   {
@@ -24,5 +25,10 @@ const App__Routes = [
     link: "/products/:id",
     component: <ProductInfo />,
   },
+  {
+    id: 5,
+    link: "/profile",
+    component: <UserProfile />,
+  }
 ];
 export default App__Routes;

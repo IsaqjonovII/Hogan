@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaEnvelope, FaUser } from "react-icons/fa";
 import { ImLocation, ImSearch } from "react-icons/im";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -7,18 +7,11 @@ import { BsQuestionCircle, BsChevronRight } from "react-icons/bs";
 import "./style.css";
 import { Hogan__Logo } from "../../assets";
 import { NavList } from "../../mocks/navdata";
-import { useSelector } from "react-redux";
 
 const Navbar = ({ changeLoginState, isSidebarOpened, changeSidebarState }) => {
-  const token = useSelector((state) => state.accessToken);
   const { pathname } = useLocation();
-  const navigate = useNavigate();
   const [isNavHovered, setIsNavHovered] = useState(false);
   const handleSidebar = () => changeSidebarState(true);
-
-  if (token) {
-    navigate("/profile");
-  }
 
   if (pathname !== "/register")
     return (
