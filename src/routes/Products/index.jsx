@@ -22,10 +22,11 @@ const Products = () => {
       </div>
 
       <div className="products__wrapper">
-        {productsData.map(({ id, title, img_main, img_hover, price }) => (
+        {productsData.map(({ id, title, img_main, img_hover, price, color }) => (
           <ProductCard
             key={id}
             id={id}
+            color={color}
             title={title}
             img_main={img_main}
             img_hover={img_hover}
