@@ -48,9 +48,9 @@ export const productsData = [
     id: 6,
     title: "Sneakers H383 Blue",
     img_main:
-      "	https://magicstore.magicapp.net/Files/MSO_MSO80594778/FOTOARTICOLI/DirBig/hogan_rebel_avorio_oro_11.jpg",
+      "	https://www.hogan.com/fashion/hoganNew/HXM00T00070BTMB001/HXM00T00070BTMB001-02.jpg?imwidth=496",
     img_hover:
-      "https://magicstore.magicapp.net/Files/MSO_MSO80594778/FOTOARTICOLI/DirBig/hogan_rebel_avorio_oro_11.jpg",
+      "	https://www.hogan.com/fashion/hoganNew/HXM00T00070BTMB001/HXM00T00070BTMB001-03.jpg?imwidth=496",
     price: 490,
   },
 ];
