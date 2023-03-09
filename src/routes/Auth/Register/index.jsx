@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signIn } from "../../../reducer/authSlice";
 import { auth } from "../../../firebase";
 import "./style.css";
 
@@ -8,11 +10,13 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const createUser = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
-      .then((_userCrendential) => {
+      .then((userCrendential) => {
+        dispatch(signIn(userCrendential.user));
         navigate("/products");
       })
       .catch((error) => console.log(error));
@@ -46,7 +50,9 @@ const Register = () => {
         <h4 className="password__reminder">
           Minimum 8 characters and 1 upper case character
         </h4>
-        <button className="register__btn" type="submit">Confirm and Register</button>
+        <button className="register__btn" type="submit">
+          Confirm and Register
+        </button>
       </form>
     </div>
   );

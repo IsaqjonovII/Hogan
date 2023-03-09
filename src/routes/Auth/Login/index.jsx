@@ -1,13 +1,29 @@
 import React, { useState } from "react";
 import "./style.css";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../../../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { signIn } from "../../../reducer/authSlice";
 
 const Login = ({ isLoginOpened, changeLoginState }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [err, setErr] = useState("");
+  const [err, setErr] = useState("");
+
+  const loginUser = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userLogin) => {
+        dispatch(signIn(userLogin.user.accessToken));
+        changeLoginState(false);
+        navigate("/products");
+      })
+      .catch((err) => setErr(err.message));
+  };
   return (
     <div
       className={
@@ -22,7 +38,7 @@ const Login = ({ isLoginOpened, changeLoginState }) => {
         />
       </div>
 
-      <form autoComplete="off" className="login__form">
+      <form autoComplete="off" className="login__form" onSubmit={loginUser}>
         <p className="login__required__label">Required field*</p>
         <label className="login__input__label" htmlFor="email">
           E-mail Address*
@@ -52,14 +68,14 @@ const Login = ({ isLoginOpened, changeLoginState }) => {
           minLength={8}
         />
 
-        {/* {err && (
+        {err && (
           <div className="err">
             <h4>{err}</h4>
             <a href="https://www.hogan.com/ww-en/password-forget/">
               Have you forgotten your login details?
             </a>
           </div>
-        )} */}
+        )}
 
         <button type="submit" className="login__btn">
           Login

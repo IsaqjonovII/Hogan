@@ -2,8 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { homePageBanner } from "../../assets";
 import "./style.css";
+import { useSelector } from "react-redux";
 
 function Home() {
+  const state = useSelector(state => state);
+
+  console.log(state);
   const homeDescription =
     "The new collection’s Hogan models are destined to become your go-to sneakers. Their multiple inspirations and aerodynamic lines define looks with a casual yet gritty essence. ";
   return (

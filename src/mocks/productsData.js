@@ -1,56 +1,56 @@
 export const productsData = [
   {
-    id: 0,
-    title: "Sneakers H383 Blue",
-    img_main:
-      "	https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-02.jpg?imwidth=820",
-    img_hover:
-      "https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-03.jpg?imwidth=820",
-    price: 990,
-  },
-  {
     id: 1,
     title: "Sneakers H383 Blue",
     img_main:
-      "	https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-02.jpg?imwidth=820",
+      "https://www.hogan.com/fashion/hoganNew/HXM6010EG11LE9B001/HXM6010EG11LE9B001-02.jpg?imwidth=475",
     img_hover:
-      "https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-03.jpg?imwidth=820",
-    price: 990,
+      "https://www.hogan.com/fashion/hoganNew/HXM6010EG11LE9B001/HXM6010EG11LE9B001-03.jpg?imwidth=624",
+    price: 270,
   },
   {
     id: 2,
     title: "Sneakers H383 Blue",
     img_main:
-      "	https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-02.jpg?imwidth=820",
+      "https://www.hogan.com/fashion/hoganNew/H5M5900DX00QP60353/H5M5900DX00QP60353-02.jpg?imwidth=624",
     img_hover:
-      "https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-03.jpg?imwidth=820",
-    price: 990,
+      "https://www.hogan.com/fashion/hoganNew/H5M5900DX00QP60353/H5M5900DX00QP60353-03.jpg?imwidth=624",
+    price: 420,
   },
   {
     id: 3,
     title: "Sneakers H383 Blue",
     img_main:
-      "	https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-02.jpg?imwidth=820",
+      "https://www.hogan.com/fashion/hoganNew/HXM5800DV42QM919AB/HXM5800DV42QM919AB-02.jpg?imwidth=624",
     img_hover:
-      "https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-03.jpg?imwidth=820",
-    price: 990,
+      "https://www.hogan.com/fashion/hoganNew/HXM5800DV42QM919AB/HXM5800DV42QM919AB-03.jpg?imwidth=624",
+    price: 310,
   },
   {
     id: 4,
     title: "Sneakers H383 Blue",
     img_main:
-      "	https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-02.jpg?imwidth=820",
+      "https://www.hogan.com/fashion/hoganNew/HXM3210Y860MGW15AA/HXM3210Y860MGW15AA-02.jpg?imwidth=624",
     img_hover:
-      "https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-03.jpg?imwidth=820",
-    price: 990,
+      "	https://www.hogan.com/fashion/hoganNew/HXM3210Y860MGW15AA/HXM3210Y860MGW15AA-03.jpg?imwidth=624",
+    price: 290,
   },
   {
     id: 5,
     title: "Sneakers H383 Blue",
     img_main:
-      "	https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-02.jpg?imwidth=820",
+      "	https://www.hogan.com/fashion/hoganNew/HXM3710CP50LE9B001/HXM3710CP50LE9B001-02.jpg?imwidth=624",
     img_hover:
-      "https://www.hogan.com/fashion/hoganNew/HXM5630EC01O6401A3/HXM5630EC01O6401A3-03.jpg?imwidth=820",
-    price: 990,
+      "	https://www.hogan.com/fashion/hoganNew/HXM3710CP50LE9B001/HXM3710CP50LE9B001-03.jpg?imwidth=624",
+    price: 390,
+  },
+  {
+    id: 6,
+    title: "Sneakers H383 Blue",
+    img_main:
+      "	https://magicstore.magicapp.net/Files/MSO_MSO80594778/FOTOARTICOLI/DirBig/hogan_rebel_avorio_oro_11.jpg",
+    img_hover:
+      "https://magicstore.magicapp.net/Files/MSO_MSO80594778/FOTOARTICOLI/DirBig/hogan_rebel_avorio_oro_11.jpg",
+    price: 490,
   },
 ];
