@@ -3,7 +3,7 @@ import "./style.css";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ id, title, img_main, img_hover, price }) => {
+const ProductCard = ({ id, title, img_main, img_hover, price, color }) => {
   const [isheartHovered, setIsHeartHovered] = useState(false);
   const [isImgHovered, setIsImgHovered] = useState(false);
 
@@ -46,7 +46,9 @@ const ProductCard = ({ id, title, img_main, img_hover, price }) => {
         </React.Fragment>
 
         <div className="prod__info__wrapper">
-          <p className="prod__title">{title}</p>
+          <p className="prod__title">
+            {title} {color}
+          </p>
           <p className="prod__price">${price}</p>
         </div>
       </Link>
