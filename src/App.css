@@ -10,11 +10,16 @@
   left: 0;
   z-index: -1;
   opacity: 0;
-  transition: 250ms ease;
   background-color: #1a1a1a8c;
 }
 
 .fade--opened {
   opacity: 1;
   z-index: 0;
+}
+
+@media screen and (max-width: 990px) {
+  .fade--opened {
+    top: 80px;
+  }
 }

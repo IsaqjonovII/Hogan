@@ -8,14 +8,22 @@ import Login from "./routes/Auth/Login";
 
 function App() {
   const [isLoginOpened, setIsLoginOpened] = useState(false);
+  const [isSidebarOpened, setIsSidebarOpened] = useState(false);
   const changeLoginState = () => setIsLoginOpened(!isLoginOpened);
+  const changeSidebarState = () => setIsSidebarOpened(!isSidebarOpened);
 
-  isLoginOpened ? document.body.style = "overflow: hidden" : document.body.style = "overflow: auto;"
+  if (isLoginOpened || isSidebarOpened) {
+    document.body.style = "overflow: hidden";
+  } else {
+    document.body.style = "overflow: auto;";
+  }
 
   return (
     <div className="app">
       <Navbar
         isLoginOpened={isLoginOpened}
+        isSidebarOpened={isSidebarOpened}
+        changeSidebarState={changeSidebarState}
         changeLoginState={changeLoginState}
       />
       <Routes>

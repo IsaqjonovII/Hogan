@@ -5,7 +5,7 @@ import "./style.css";
 import { useSelector } from "react-redux";
 
 function Home() {
-  const state = useSelector(state => state);
+  const state = useSelector((state) => state);
 
   console.log(state);
   const homeDescription =
@@ -19,7 +19,7 @@ function Home() {
           <p className="banner__description">{homeDescription}</p>
         </div>
 
-        <Link to="/products" className="home__page__link">  
+        <Link to="/products" className="home__page__link">
           <button className="products__page__link__btn">
             Discover the new collection
           </button>
