@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaEnvelope, FaUser } from "react-icons/fa";
 import { ImLocation, ImSearch } from "react-icons/im";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { BsQuestionCircle, BsChevronRight } from "react-icons/bs";
+import { BsBagFill, BsChevronRight } from "react-icons/bs";
 import "./style.css";
 import { Hogan__Logo } from "../../assets";
 import { NavList } from "../../mocks/navdata";
@@ -23,7 +23,9 @@ const Navbar = ({ changeLoginState, isSidebarOpened, changeSidebarState }) => {
 
           <div className="location__container flex">
             <ImLocation className="icon" />
-            <BsQuestionCircle className="icon" />
+            <Link to="/cart" className="icon__link">
+              <BsBagFill className="icon" />
+            </Link>
             <p>Rest of the World</p>
           </div>
           <div className="nav__logo__wrapper flex">

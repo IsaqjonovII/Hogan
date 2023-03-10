@@ -10,6 +10,7 @@ export const productsData = [
     color: "Blue",
     description:
       "The Hogan H321 is a historic running-inspired style that reflect the iconic aesthetic features from the brand. These bold men's sneakers in suede and technical fabric feature a flocked side H. Perfect to complete your busy days in style, from the office to the weekend.",
+    qty: 1,
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const productsData = [
     color: "Blue",
     description:
       "The Hogan H321 is a historic running-inspired style that reflect the iconic aesthetic features from the brand. These bold men's sneakers in suede and technical fabric feature a flocked side H. Perfect to complete your busy days in style, from the office to the weekend.",
+    qty: 1,
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const productsData = [
     color: "Blue",
     description:
       "The Hogan H321 is a historic running-inspired style that reflect the iconic aesthetic features from the brand. These bold men's sneakers in suede and technical fabric feature a flocked side H. Perfect to complete your busy days in style, from the office to the weekend.",
+    qty: 1,
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ export const productsData = [
     color: "Blue",
     description:
       "The Hogan H321 is a historic running-inspired style that reflect the iconic aesthetic features from the brand. These bold men's sneakers in suede and technical fabric feature a flocked side H. Perfect to complete your busy days in style, from the office to the weekend.",
+    qty: 1,
   },
   {
     id: 5,
@@ -58,6 +62,7 @@ export const productsData = [
     color: "Blue",
     description:
       "The Hogan H321 is a historic running-inspired style that reflect the iconic aesthetic features from the brand. These bold men's sneakers in suede and technical fabric feature a flocked side H. Perfect to complete your busy days in style, from the office to the weekend.",
+    qty: 1,
   },
   {
     id: 6,
@@ -70,5 +75,6 @@ export const productsData = [
     color: "Blue",
     description:
       "The Hogan H321 is a historic running-inspired style that reflect the iconic aesthetic features from the brand. These bold men's sneakers in suede and technical fabric feature a flocked side H. Perfect to complete your busy days in style, from the office to the weekend.",
+    qty: 1,
   },
 ];

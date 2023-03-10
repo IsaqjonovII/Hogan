@@ -4,8 +4,12 @@ import { ImLocation, ImHeart } from "react-icons/im";
 import { BsTelephone } from "react-icons/bs";
 import { productsData } from "../../../mocks/productsData";
 import "./style.css";
+import { addProduct } from "../../../reducer/productSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 const ProductInfo = () => {
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.products);
   const [uniqueProduct, setUniqueProduct] = useState();
   const [isHelpOpened, setIsHelpOpened] = useState(false);
   const { id } = useParams();
@@ -14,6 +18,28 @@ const ProductInfo = () => {
     setUniqueProduct(filteredProduct[0]);
   }, [id]);
 
+  const handleAddToCart = (productData) => {
+    let productIndex = products.findIndex((p) => p.id === productData.id);
+    if (productIndex < 0) {
+      let newProduct = {
+        ...productData,
+        qty: 1,
+      };
+      dispatch(addProduct([...products, newProduct]));
+    } else {
+      let newOrder = products.map((orderedPro, inx) => {
+        if (inx === productIndex) {
+          return {
+            ...orderedPro,
+            qty: orderedPro.qty + 1,
+          };
+        } else {
+          return orderedPro;
+        }
+      });
+      dispatch(addProduct(newOrder));
+    }
+  };
   return (
     <div className="unique__product__page">
       <div className="unique__pro__wrapper flex">
@@ -32,12 +58,20 @@ const ProductInfo = () => {
               <ImLocation />
               <span>Find in Boutique</span>
             </div>
-            <div className="pro__wishlist flex">
+            <div
+              className="pro__wishlist flex"
+              onClick={() => handleAddToCart(uniqueProduct)}
+            >
               <ImHeart />
-              <span>Add to wishlist</span>
+              <span>Add to Cart</span>
             </div>
           </div>
-          <h3 className="help__title" onClick={() => setIsHelpOpened(!isHelpOpened)}>Need help?</h3>
+          <h3
+            className="help__title"
+            onClick={() => setIsHelpOpened(!isHelpOpened)}
+          >
+            Need help?
+          </h3>
           <div
             className={
               isHelpOpened

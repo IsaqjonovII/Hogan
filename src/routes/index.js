@@ -3,6 +3,7 @@ import Register from "./Auth/Register";
 import Products from "./Products";
 import ProductInfo from "./Products/ProductInfo";
 import UserProfile from "./Profile";
+import Cart from "./Cart";
 
 const App__Routes = [
   {
@@ -29,6 +30,11 @@ const App__Routes = [
     id: 5,
     link: "/profile",
     component: <UserProfile />,
-  }
+  },
+  {
+    id: 6,
+    link: "/cart",
+    component: <Cart />,
+  },
 ];
 export default App__Routes;
