@@ -94,6 +94,12 @@
 .contact__info--visible {
     display: block;
 }
+.back__link {
+    width: 60px;
+    height: 40px;
+    margin: 0 0 15px 0;
+    cursor: pointer;
+}
 
 .help__title {
     cursor: pointer;
@@ -104,6 +110,10 @@
 @media screen and (max-width: 1100px) {
     .unique__product__page {
         padding: 0 50px;
+    }
+
+    .back__link {
+        margin: 20px 0;
     }
 }
 
