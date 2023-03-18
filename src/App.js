@@ -37,6 +37,7 @@ function App() {
         isLoginOpened={isLoginOpened}
       />
       <Footer />
+
       <div className={isLoginOpened ? "fade fade--opened" : "fade"} />
     </div>
   );

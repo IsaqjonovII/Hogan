@@ -254,6 +254,20 @@
     .navbar__wrapper {
         padding: 0 50px;
     }
+
+    .sneakers {
+        padding: 20px 80px;
+        justify-content: space-between;
+    }
+
+    .collection__item:nth-child(4) .sneakers,
+    .collection__item:last-child .sneakers {
+        justify-content: start;
+    }
+
+    .links__container {
+        margin: 0 50px;
+    }
 }
 
 @media screen and (max-width: 990px) {
