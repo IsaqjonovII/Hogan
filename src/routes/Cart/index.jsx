@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addProduct } from "../../reducer/productSlice";
+import { addProduct, removeProduct } from "../../reducer/productSlice";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import "./style.css";
 
@@ -8,9 +8,8 @@ const Cart = () => {
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
 
-  console.log(products);
   const handlePlus = (id) => {
-    const productInx = products.find((product) => product.id === id);
+    const productInx = products.findIndex((product) => product.id === id);
 
     const addQty = products.map((pro, inx) => {
       if (productInx === inx) {
@@ -24,13 +23,30 @@ const Cart = () => {
     });
 
     dispatch(addProduct(addQty));
+  };
 
-    
+  const handleRemoveProduct = (id) => {
+    const filteredPro = products.filter((product) => product.id !== id);
+    dispatch(removeProduct(filteredPro));
   };
 
   const handleMinus = (id) => {
-    console.log(id);
+    const productInx = products.findIndex((product) => product.id === id);
+
+    const addQty = products.map((pro, inx) => {
+      if (productInx === inx) {
+        return {
+          ...pro,
+          qty: pro.qty - 1,
+        };
+      } else {
+        return pro;
+      }
+    });
+
+    dispatch(addProduct(addQty));
   };
+  console.log(products);
 
   return (
     <div className="cart__page">
@@ -72,18 +88,24 @@ const Cart = () => {
                       Color: <b>{color}</b>
                     </p>
 
-                    <button className="remove__btn">Remove</button>
+                    <button
+                      className="remove__btn"
+                      onClick={() => handleRemoveProduct(id)}
+                    >
+                      Remove
+                    </button>
                   </div>
                 </td>
                 <td>${price}</td>
                 <td>
-                  <button className="add__qty" onClick={() => handlePlus(id)}>
+                  <button className="add__qty" onClick={() => handlePlus(id)} disabled={qty >= 8}>
                     <AiOutlinePlus />
                   </button>
                   <span className="qty">{qty}</span>
                   <button
                     className="minus__qty"
                     onClick={() => handleMinus(id)}
+                    disabled={qty === 1}
                   >
                     <AiOutlineMinus />
                   </button>
