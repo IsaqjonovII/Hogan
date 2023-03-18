@@ -38,6 +38,7 @@
     width: 50px;
     height: 40px;
 }
+
 .user__actions {
     display: flex;
     justify-content: flex-end;
@@ -87,8 +88,18 @@
 
 .sidebar {
     display: none;
-    z-index: 999;
-
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px 0;
+    overflow-y: auto;
+    transition: 350ms ease-in-out;
+    background-color: #fff;
+    border-right: 1px solid #a2a2a2;
+    box-shadow: 2px 0px 10px #ddd;
 }
 
 .collection__item {
@@ -274,17 +285,6 @@
 
     .sidebar {
         display: block;
-        width: 100%;
-        max-width: 500px;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 30px 0;
-        transition: 350ms ease-in-out;
-        background-color: #fff;
-        border-right: 1px solid #a2a2a2;
-        box-shadow: 2px 0px 10px #ddd;
     }
 
     .close__icon__wrapper {

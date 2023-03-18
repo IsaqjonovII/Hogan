@@ -1,0 +1,152 @@
+.cart__page {
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+    padding: 0 120px;
+}
+
+.cart__actions {
+    width: 100%;
+    height: 100px;
+}
+
+.payment__btn {
+    padding: 13px 15px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+
+.cart__table {
+    width: 100%;
+    height: 100%;
+    min-height: 40vh;
+    border-collapse: collapse;
+}
+
+.table__header {
+    width: 100%;
+    height: 80px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #9c9c9c;
+    font-weight: 300;
+}
+
+.table__body {
+    width: 100%;
+    height: auto;
+}
+
+.table__description {
+    flex: 1;
+    align-items: flex-start;
+}
+
+.table__row {
+    border-top: 1px solid #b2b2b2;
+}
+
+.pro__img__wrapper {
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+}
+
+.pro__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pro__details {
+    margin: 8px 0;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.pro__title {
+    font-size: 22px;
+}
+
+.pro__detail {
+    font-size: 18px;
+    margin: 20px 0 !important;
+}
+
+.pro__remove {
+    width: 100%;
+    max-width: 200px;
+    color: #9c9c9c;
+}
+
+.remove__btn {
+    width: 120px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    font-size: 16px;
+    color: #9c9c9c;
+    cursor: pointer;
+}
+
+
+.add__qty, .minus__qty {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin: 0 10px;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+
+.add__qty:hover, .minus__qty:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.qty {
+    font-size: 17px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 1100px) {
+    .cart__page {
+        padding: 0 70px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .cart__page {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product__counter {
+        font-size: 28px;
+    }
+
+    .payment__btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .product__counter {
+        font-size: 21px;
+    }
+
+    .payment__btn {
+        font-size: 13px;
+        padding: 10px;
+        text-transform: capitalize;
+    }
+}

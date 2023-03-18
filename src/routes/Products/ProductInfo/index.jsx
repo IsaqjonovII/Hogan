@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ImLocation, ImHeart } from "react-icons/im";
-import { BsTelephone } from "react-icons/bs";
+import { BsTelephone, BsChevronLeft } from "react-icons/bs";
 import { productsData } from "../../../mocks/productsData";
 import "./style.css";
 import { addProduct } from "../../../reducer/productSlice";
@@ -42,6 +42,12 @@ const ProductInfo = () => {
   };
   return (
     <div className="unique__product__page">
+      <div className="back__link flex">
+        <Link to="/products">
+          <BsChevronLeft />
+          <div>Back</div>
+        </Link>
+      </div>
       <div className="unique__pro__wrapper flex">
         <div className="unique__pro__img__wrapper">
           <img className="pro__img" src={uniqueProduct?.img_main} alt="" />
